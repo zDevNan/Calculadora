@@ -172,14 +172,14 @@ button[type="button"].reset:hover {
 /* Estilos para a área de Histórico */
 .history {
     flex: 1;
-    width: 700px ;
-    margin-left: 30px; /* Aumenta a margem à esquerda */
+    width: 100%; /* Faz com que a largura se ajuste à tela */
+    max-width: 600px; /* Limita a largura máxima */
+    margin: 30px auto; /* Adiciona margem automática */
     padding: 25px;
     background: #222; /* Cinza escuro */
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
-    max-width: 600px; /* Aumenta a largura máxima do histórico */
-    height: 500px; /* Define uma altura maior */
+    height: auto; /* Ajusta a altura automaticamente */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
 }
 
@@ -218,4 +218,48 @@ button[type="button"].reset:hover {
 .back-button:hover {
     background: #cc0000; /* Vermelho mais escuro */
     transform: scale(1.05); /* Leve efeito de zoom */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    .history {
+        padding: 15px;
+        height: auto; /* Remove altura fixa para ajustar ao conteúdo */
+        margin: 20px auto;
+    }
+
+    .history h2 {
+        font-size: 1.5rem;
+    }
+
+    #history-list li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .button-group button {
+        flex: 1 1 100%; /* Botões em tela pequena ocupam 100% da largura */
+    }
+
+    .history {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .history h2 {
+        font-size: 1.2rem;
+    }
+
+    #history-list li {
+        font-size: 0.9rem;
+    }
 }
