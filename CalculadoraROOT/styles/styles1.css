@@ -1,0 +1,221 @@
+/* Estilos para o "Main" */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #000; /* Fundo preto */
+    color: #e0e0e0; /* Texto claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contêiner Principal */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #222; /* Cinza escuro */
+    color: #ff0000; /* Texto vermelho */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(114, 8, 8, 0.705); /* Sombra */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff0000; /* Vermelho */
+}
+
+form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff0000; /* Vermelho */
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: 2px solid #ff0000; /* Vermelho */
+    border-radius: 6px;
+    width: calc(100% - 24px);
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background: #000; /* Fundo do campo de entrada preto */
+    color: #e0e0e0; /* Texto claro */
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    background: #ff0000; /* Vermelho */
+    color: #e0e0e0; /* Texto claro */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #cc0000; /* Vermelho mais escuro */
+    transform: scale(1.05);
+}
+
+#area-texto {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+#area-texto a {
+    color: #ff0000; /* Vermelho */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#area-texto a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para calc.html */
+
+/* Contêiner da Calculadora */
+.calculator {
+    flex: 3;
+    max-width: 900px; /* A largura da calculadora */
+    width: 100%; /* Garante que use toda a largura disponível */
+    margin: 50px auto;
+    padding: 30px;
+    background: #111; /* Fundo */
+    color: #e0e0e0; /* Texto claro */
+    border-radius: 12px; /* Borda arredondada */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Sombra escura */
+    text-align: center;
+}
+
+/* Grupo de Botões */
+.button-group {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    justify-content: center; /* Alinha os botões ao centro */
+    gap: 15px; /* Aumenta o espaço entre os botões */
+    margin-bottom: 25px; /* O espaço abaixo do grupo de botões */
+}
+
+/* Botões */
+.button-group button {
+    flex: 1 1 calc(50% - 30px); 
+    padding: 12px;
+    border: none;
+    background: #ff0000; /* Vermelho */
+    color: #e0e0e0; /* Texto claro */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    text-align: center; /* Alinha o texto ao centro */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button-group button:hover {
+    background: #cc0000; /* Vermelho mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Leve efeito de zoom */
+}
+
+/* Botões do valor */
+button[type="button"].calculate,
+button[type="button"].reset {
+    width: calc(50% - 15px); /* Ajusta a largura dos botões */
+    margin: 0 10px; /* Margem entre os botões */
+    background: #ff0000; /* Vermelho */
+    color: #e0e0e0; /* Texto claro */
+}
+
+button[type="button"].calculate:hover,
+button[type="button"].reset:hover {
+    background: #cc0000; /* Vermelho mais escuro ao passar o mouse */
+}
+
+/* Áreas de Entrada e Resultado */
+#form-group,
+#result {
+    display: none;
+}
+
+#form-group label,
+#result label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff0000; 
+}
+
+#valor,
+#resultado {
+    padding: 12px;
+    border: 2px solid #ff0000; /* Vermelho */
+    border-radius: 8px;
+    width: calc(100% - 24px);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    background: #000; /* Fundo do campo de entrada preto */
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* Estilos para a área de Histórico */
+.history {
+    flex: 1;
+    width: 700px ;
+    margin-left: 30px; /* Aumenta a margem à esquerda */
+    padding: 25px;
+    background: #222; /* Cinza escuro */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    max-width: 600px; /* Aumenta a largura máxima do histórico */
+    height: 500px; /* Define uma altura maior */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+}
+
+.history h2 {
+    color: #ff0000; /* Vermelho */
+}
+
+/* Lista de Histórico */
+#history-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#history-list li {
+    border-bottom: 1px solid #ff0000; /* Vermelho */
+    padding: 12px 0;
+    color: #e0e0e0; /* Texto claro */
+    font-size: 1.1rem;
+}
+
+/* Botão Voltar */
+.back-button {
+    display: block;
+    margin: 25px auto;
+    padding: 12px 24px;
+    border: none;
+    background: #ff0000; /* Vermelho */
+    color: #e0e0e0; /* Texto claro */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background: #cc0000; /* Vermelho mais escuro */
+    transform: scale(1.05); /* Leve efeito de zoom */
+}

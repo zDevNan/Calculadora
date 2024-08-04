@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./styles/styles1.css">
+    <link rel="icon" href="favicon-16x16.png" type="icon">
+    <script src="./javascript/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Calculadora</h1>
+            <div class="button-group">
+                <button onclick="selectOperation('dobro')">Dobro</button>
+                <button onclick="selectOperation('soma')">Soma</button>
+                <button onclick="selectOperation('subtracao')">Subtração</button>
+                <button onclick="selectOperation('multiplicacao')">Multiplicação</button>
+                <button onclick="selectOperation('divisao')">Divisão</button>
+                <button onclick="selectOperation('potencia')">Potência</button>
+            </div>
+            <div id="form-group">
+                <label for="valor">Valor:</label>
+                <input type="text" id="valor" oninput="validateInput()">
+                <button type="button" onclick="showResult()">Calcular</button>
+                <button type="button" onclick="resetCalculator()">Resetar</button>
+            </div>
+            <div id="result">
+                <label for="resultado">Resultado:</label>
+                <input type="text" id="resultado" readonly>
+            </div>
+            <button class="back-button" onclick="goBack()">Voltar</button>
+        </div>
+        <div class="history">
+            <h2>Histórico</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+</body>
+</html>

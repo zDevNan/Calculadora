@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="icon" href="favicon-16x16.png" type="icon">
+    <link rel="stylesheet" href="styles/styles1.css">
+    <!-- Link para o arquivo JavaScript -->
+    <script src="javascript/script.js" defer></script>
+    <style>
+        /* Estilos para o menu */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #b3e5fc); /* Gradiente celeste suave */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #ffffff; /* Branco */
+            color: #333;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2196f3; /* Azul celeste */
+        }
+
+        form {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"] {
+            padding: 14px;
+            border: 2px solid #e0e0e0; /* Cinza claro */
+            border-radius: 8px;
+            width: calc(100% - 28px);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            background: #ffffff; /* Fundo branco */
+            color: #000; /* Texto preto */
+        }
+
+        button {
+            padding: 14px 28px;
+            border: none;
+            background: #ffeb3b; /* Amarelo brilhante */
+            color: #333;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #fbc02d; /* Amarelo mais escuro */
+            transform: scale(1.05);
+        }
+
+        #area-texto {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        #area-texto a {
+            color: #2196f3; /* Azul celeste */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #area-texto a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Qual seu nome?</h1>
+        <form>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome">
+            <button type="button" onclick="enviarDados()">Enviar</button>
+        </form>
+        <div id="area-texto" style="display: none;">
+            Olá <span id="nome-digitado"></span>, você pode prosseguir ao templo. <br><br>
+            <a href="calc.html">-->[Ir para a página da Calculadora!]<--</a>
+        </div>
+    </div>
+</body>
+</html>
