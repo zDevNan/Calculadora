@@ -173,7 +173,7 @@ button[type="button"].reset:hover {
 .history {
     flex: 1;
     width: 100%; /* Faz com que a largura se ajuste à tela */
-    max-width: 600px; /* Limita a largura máxima */
+    max-width: 200px; /* Limita a largura máxima */
     margin: 30px auto; /* Adiciona margem automática */
     padding: 25px;
     background: #222; /* Cinza escuro */
